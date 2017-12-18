@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+   <body>
+    <h1>Select</h1>
+    
+    <select>
+        {% for symbol in symbols %}
+           <option value={{symbol}}>
+               {{symbol.upper()}}
+           </option>
+         {% endfor %}
+    </select>
+      
+   </body>
+</html>
