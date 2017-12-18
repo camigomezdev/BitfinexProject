@@ -3,7 +3,7 @@ import time
 import sys
 
 from btfxwss import BtfxWss
-    
+
 log = logging.getLogger(__name__)
 
 fh = logging.FileHandler('test.log')

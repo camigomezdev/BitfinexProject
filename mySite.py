@@ -1,7 +1,7 @@
-from flask import Flask, render_template 
+from flask import Flask, render_template
 from bitfinexApi import BitfinexApi
 
-app = Flask(__name__) 
+app = Flask(__name__)
 
 
 btx = BitfinexApi()
