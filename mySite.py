@@ -10,9 +10,14 @@ btx = BitfinexApi()
 
 
 @app.route('/')
-def home():
+def get_symbols():
     symbols = btx.getSymbols()
     return render_template("home.html", symbols = symbols)
+
+@app.route('/<symbol>')
+def get_ticker(symbol):
+    ticker = btx.getTicker(symbol)
+    return render_template("tickerPage.html", ticker = ticker)
 
 if __name__ == '__main__':
     app.run(debug=True, port=3001)

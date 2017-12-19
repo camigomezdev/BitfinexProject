@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>My site</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+
+<body>
+    <div class="page">
+        <h1>Ticker</h1>
+        <div class="row">
+            <div class="col-4">
+                MID: {{ticker['mid']}}
+            </div>
+            <div class="col-8">
+                LOW: {{ticker['low']}}
+            </div>
+        </div>
+
+        <div>
+            HIGH: {{ticker['high']}}
+        </div>
+
+    </div>
+</body>
+
+</html>
