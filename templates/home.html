@@ -1,19 +1,14 @@
-<!doctype html>
-<html>
-    <head>
-        <title>My site</title>
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
-    </head>
-   <body>
-    <h1>Select</h1>
-    
-    <select>
-        {% for symbol in symbols %}
-           <option value={{symbol}}>
-               {{symbol.upper()}}
-           </option>
-         {% endfor %}
-    </select>
-      
-   </body>
-</html>
+{% extends 'header.html' %} 
+{% block content %}
+<h1>
+    Select</h1>
+
+<select>
+    {% for symbol in symbols %}
+    <option value={{symbol}}>
+        {{symbol.upper()}}
+    </option>
+    {% endfor %}
+</select>
+
+{% endblock %}

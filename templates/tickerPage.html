@@ -1,13 +1,5 @@
-<!doctype html>
-<html>
-
-<head>
-    <title>My site</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
-
-</head>
-
-<body>
+{% extends 'header.html' %} 
+{% block content %}
     <div class="page">
         <h1>Ticker</h1>
         <div class="row">
@@ -24,6 +16,4 @@
         </div>
 
     </div>
-</body>
-
-</html>
+{% endblock %}
